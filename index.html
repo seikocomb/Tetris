@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Tetris</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body class="start">
+        <section id="start">
+            <h1>Tetris</h1>
+            <div id="description">
+                <p>画面の左下に十字ボタンがあります。</p>
+                <ul>
+                    <li>上ボタン&uarr;で一瞬で落下</li>
+                    <li>左右ボタン&larr;&rarr;で左右移動</li>
+                    <li>下ボタン&darr;で速く落下</li>
+                </ul>
+                <p>右下には回転用ボタンがあります。</p>
+                <p>左のボタン&#8634;で反時計回り、右のボタン&#8635;で時計回りです。</p>
+                <p>操作をもう一度確認したい場合は画面下の終了ボタン&#8962;を押してください。</p>
+            </div>
+            <h1 id="start_button"><p>スタート！</p></h1>
+        </section>
+        <section id="game" style="display: none;">
+            <div id="tetris">
+                <div id="row">
+                    <div id="block"></div><div id="a_1"></div><div id="a_2"></div><div id="a_3"></div><div id="a_4"></div><div id="a_5"></div><div id="a_6"></div><div id="a_7"></div><div id="a_8"></div><div id="a_9"></div><div id="a_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="b_1"></div><div id="b_2"></div><div id="b_3"></div><div id="b_4"></div><div id="b_5"></div><div id="b_6"></div><div id="b_7"></div><div id="b_8"></div><div id="b_9"></div><div id="b_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="c_1"></div><div id="c_2"></div><div id="c_3"></div><div id="c_4"></div><div id="c_5"></div><div id="c_6"></div><div id="c_7"></div><div id="c_8"></div><div id="c_9"></div><div id="c_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="d_1"></div><div id="d_2"></div><div id="d_3"></div><div id="d_4"></div><div id="d_5"></div><div id="d_6"></div><div id="d_7"></div><div id="d_8"></div><div id="d_9"></div><div id="d_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="e_1"></div><div id="e_2"></div><div id="e_3"></div><div id="e_4"></div><div id="e_5"></div><div id="e_6"></div><div id="e_7"></div><div id="e_8"></div><div id="e_9"></div><div id="e_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="f_1"></div><div id="f_2"></div><div id="f_3"></div><div id="f_4"></div><div id="f_5"></div><div id="f_6"></div><div id="f_7"></div><div id="f_8"></div><div id="f_9"></div><div id="f_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="g_1"></div><div id="g_2"></div><div id="g_3"></div><div id="g_4"></div><div id="g_5"></div><div id="g_6"></div><div id="g_7"></div><div id="g_8"></div><div id="g_9"></div><div id="g_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="h_1"></div><div id="h_2"></div><div id="h_3"></div><div id="h_4"></div><div id="h_5"></div><div id="h_6"></div><div id="h_7"></div><div id="h_8"></div><div id="h_9"></div><div id="h_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="i_1"></div><div id="i_2"></div><div id="i_3"></div><div id="i_4"></div><div id="i_5"></div><div id="i_6"></div><div id="i_7"></div><div id="i_8"></div><div id="i_9"></div><div id="i_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="j_1"></div><div id="j_2"></div><div id="j_3"></div><div id="j_4"></div><div id="j_5"></div><div id="j_6"></div><div id="j_7"></div><div id="j_8"></div><div id="j_9"></div><div id="j_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="k_1"></div><div id="k_2"></div><div id="k_3"></div><div id="k_4"></div><div id="k_5"></div><div id="k_6"></div><div id="k_7"></div><div id="k_8"></div><div id="k_9"></div><div id="k_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="l_1"></div><div id="l_2"></div><div id="l_3"></div><div id="l_4"></div><div id="l_5"></div><div id="l_6"></div><div id="l_7"></div><div id="l_8"></div><div id="l_9"></div><div id="l_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="m_1"></div><div id="m_2"></div><div id="m_3"></div><div id="m_4"></div><div id="m_5"></div><div id="m_6"></div><div id="m_7"></div><div id="m_8"></div><div id="m_9"></div><div id="m_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="n_1"></div><div id="n_2"></div><div id="n_3"></div><div id="n_4"></div><div id="n_5"></div><div id="n_6"></div><div id="n_7"></div><div id="n_8"></div><div id="n_9"></div><div id="n_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="o_1"></div><div id="o_2"></div><div id="o_3"></div><div id="o_4"></div><div id="o_5"></div><div id="o_6"></div><div id="o_7"></div><div id="o_8"></div><div id="o_9"></div><div id="o_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="p_1"></div><div id="p_2"></div><div id="p_3"></div><div id="p_4"></div><div id="p_5"></div><div id="p_6"></div><div id="p_7"></div><div id="p_8"></div><div id="p_9"></div><div id="p_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="q_1"></div><div id="q_2"></div><div id="q_3"></div><div id="q_4"></div><div id="q_5"></div><div id="q_6"></div><div id="q_7"></div><div id="q_8"></div><div id="q_9"></div><div id="q_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="r_1"></div><div id="r_2"></div><div id="r_3"></div><div id="r_4"></div><div id="r_5"></div><div id="r_6"></div><div id="r_7"></div><div id="r_8"></div><div id="r_9"></div><div id="r_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="s_1"></div><div id="s_2"></div><div id="s_3"></div><div id="s_4"></div><div id="s_5"></div><div id="s_6"></div><div id="s_7"></div><div id="s_8"></div><div id="s_9"></div><div id="s_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="t_1"></div><div id="t_2"></div><div id="t_3"></div><div id="t_4"></div><div id="t_5"></div><div id="t_6"></div><div id="t_7"></div><div id="t_8"></div><div id="t_9"></div><div id="t_10"></div><div id="block"></div>
+                </div>
+                <div id="row">
+                    <div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div><div id="block"></div>
+                </div>
+            </div>
+            <div id="finish"><p>&#8962;</p></div>
+            <div id="move">
+                <div id="up"><p>&uarr;</p></div>
+                <div id="left"><p>&larr;</p></div>
+                <div id="right"><p>&rarr;</p></div>
+                <div id="down"><p>&darr;</p></div>
+            </div>
+            <div id="rotate">
+                <div id="CCW"><p>&#8634;</p></div>
+                <div id="CW"><p>&#8635;</p></div>
+            </div>
+            <p id="score">SCORE: 0</p>
+            <p id="minos"></p>
+            <p id="hold"></p>
+        </section>
+    </body>
+</html>

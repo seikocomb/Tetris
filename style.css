@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+.start {
+    position: relative;
+}
+#start {
+    margin: auto;
+    top: 50%;
+    transform: translate(0, 50%);
+}
+h1, #description {
+    text-align: center;
+}
+
+#game{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#tetris{
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 50px;
+    /** 50% - (ブロックサイズ × 5) */
+}
+#row div{
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+}
+#row{
+    height: 20px;
+    width: 240px;
+    /** ブロックサイズ × 12 */
+    display: flex;
+    margin: 0;
+}
+#block{
+    background-color: gray;
+}
+
+#move{
+    position: absolute;
+    left: 50px;
+    top: 500px;
+    width: 90px;
+    height: 90px;
+}
+#move div{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: darkgray;
+}
+#game p{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 180%;
+}
+#up{
+    left: 30px;
+    top: 0;
+}
+#left{
+    left: 0;
+    top: 30px;
+}
+#right{
+    left: 60px;
+    top: 30px;
+}
+#down{
+    left: 30px;
+    top: 60px;
+}
+
+#rotate{
+    position: absolute;
+    top: 530px;
+    right: 50px;
+    width: 90px;
+    height: 30px;
+}
+#rotate div{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: darkgray;
+}
+#CCW{
+    left: 0px;
+}
+#CW{
+    left: 60px;
+}
+#finish{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: darkgray;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#minos{
+    position: absolute;
+    top: 200px;
+    left: -200px;
+}
+#hold{
+    position: absolute;
+    top: 200px;
+    right: -200px;
+}
