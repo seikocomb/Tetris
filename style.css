@@ -29,7 +29,6 @@ h1, #description {
     position: absolute;
     left: calc(50% - 100px);
     top: 50px;
-    /** 50% - (ブロックサイズ × 5) */
 }
 #row div{
     height: 20px;
@@ -39,7 +38,6 @@ h1, #description {
 #row{
     height: 20px;
     width: 240px;
-    /** ブロックサイズ × 12 */
     display: flex;
     margin: 0;
 }
